@@ -29,3 +29,8 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Release
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: app-release.apk
+        path: path/to/your/apk/app-release.apk
