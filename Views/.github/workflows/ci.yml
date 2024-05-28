@@ -1,0 +1,31 @@
+name: Build Xamarin Android
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Install Xamarin.Android
+      run: |
+        sudo mkdir -p /Library/Frameworks/Xamarin.Android.framework/Versions/Current
+        sudo wget https://aka.ms/xamarin-android-commercial-d16-6-macos -O /Library/Frameworks/Xamarin.Android.framework/Versions/Current/Xamarin.Android.pkg
+        sudo installer -pkg /Library/Frameworks/Xamarin.Android.framework/Versions/Current/Xamarin.Android.pkg -target /
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
