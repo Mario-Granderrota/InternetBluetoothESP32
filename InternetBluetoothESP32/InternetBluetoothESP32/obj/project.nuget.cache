@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2hGHblCcRJc=",
+  "success": true,
+  "projectFilePath": "/workspaces/InternetBluetoothESP32/InternetBluetoothESP32/InternetBluetoothESP32/InternetBluetoothESP32.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/inthehand.net.bluetooth/4.1.43/inthehand.net.bluetooth.4.1.43.nupkg.sha512",
+    "/home/codespace/.nuget/packages/linux.bluetooth/5.66.0/linux.bluetooth.5.66.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/tmds.dbus/0.15.0/tmds.dbus.0.15.0.nupkg.sha512"
+  ],
+  "logs": []
+}
